@@ -1,15 +1,26 @@
-.logo_block{}
+.logo_block{
+    width: 50px;
+    text-align: center;
+}
 
-
+.tabs_block{
+    display: flex;
+    align-items: start;
+    align-self: sart;
+   
+}
+.tab-content{
+    width: 100%;
+}
 .nav-pills{
     .nav-link{
         font-size: 23px;
-     
+        color: #000;
         i{
             width: 20px;
 
             font-size: 23px;
-            color: #fff;
+            
         }
     }
 }

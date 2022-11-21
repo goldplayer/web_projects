@@ -1,22 +1,27 @@
 section.header 
     .container-fluid.left-tabs 
         .logo_block 
-            img.logo(src="", alt="")
-        .d-flex.align-items-start
+            //- img.logo(src="", alt="")
+            i(data-feather="phone-call")
+        .tabs_block
             #v-pills-tab.nav.flex-column.nav-pills.me-3(role='tablist' aria-orientation='vertical')
-
-                button#v-pills-shopcart-tab.nav-link.active(data-bs-toggle='pill' data-bs-target='#v-pills-shopcart' type='button' role='tab' aria-controls='v-pills-shopcart' aria-selected='true') 
-                    i.fa-thin.fa-basket-shopping
-                button#v-pills-profile-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-profile' type='button' role='tab' aria-controls='v-pills-profile' aria-selected='false') 
-
-                button#v-pills--tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-disabled' type='button' role='tab' aria-controls='v-pills-disabled' aria-selected='false') 
-
+                
+                button#v-pills-shopcart-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-shopcart' type='button' role='tab' aria-controls='v-pills-shopcart' aria-selected='true') 
+                    i(data-feather='shopping-cart')
+                button#v-pills-users-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-users' type='button' role='tab' aria-controls='v-pills-users' aria-selected='false') 
+                    i(data-feather='users')
+                button#v-pills-search-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-search' type='button' role='tab' aria-controls='v-pills-search' aria-selected='false') 
+                    i(data-feather='search')
                 button#v-pills-messages-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-messages' type='button' role='tab' aria-controls='v-pills-messages' aria-selected='false') 
-
+                    i(data-feather='search')
                 button#v-pills-settings-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-settings' type='button' role='tab' aria-controls='v-pills-settings' aria-selected='false') 
+                    i(data-feather='search')
 
+                    
             #v-pills-tabContent.tab-content
-                #v-pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='v-pills-shopcart-tab' tabindex='0') ...
+                #v-pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='v-pills-shopcart-tab' tabindex='0') 
+                    .container-tab
+                        h1 ShopCart
                 #v-pills-profile.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-profile-tab' tabindex='0') ...
                 #v-pills-disabled.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-disabled-tab' tabindex='0') ...
                 #v-pills-messages.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-messages-tab' tabindex='0') ...

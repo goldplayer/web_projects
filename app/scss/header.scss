@@ -1,26 +1,26 @@
-.logo_block{
-    width: 50px;
-    text-align: center;
+.header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
 }
-
-.tabs_block{
+.header_block{
     display: flex;
-    align-items: start;
-    align-self: sart;
-   
+    align-items: center;
 }
-.tab-content{
+.logo_block{
     width: 100%;
+    img{
+        width: 50px;
+    }
 }
-.nav-pills{
-    .nav-link{
-        font-size: 23px;
-        color: #000;
-        i{
-            width: 20px;
+.avatar_cabinet{
+    display: flex;
+    justify-content: end;
+    max-width: 300px;
 
-            font-size: 23px;
-            
+    .avatar_img{
+        img{
+            width: 30px;
         }
     }
 }

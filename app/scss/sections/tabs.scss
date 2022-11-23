@@ -1,0 +1,24 @@
+.tabs{
+   
+}
+
+.tabs_block{
+    display: flex;
+
+    .tabs_controle{
+        max-width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .nav-link{
+            background: transparent;
+            border: 0px solid ;
+        
+
+            img{
+                width: 40px;
+            }
+        }
+    }
+}

@@ -1,26 +1,12 @@
 .header{
     padding-top: 15px;
     padding-bottom: 15px;
-    
 }
-.header_block{
-    display: flex;
-    align-items: center;
-}
+
 .logo_block{
-    width: 100%;
+    text-align: center;
+    max-width: 100px;
     img{
         width: 50px;
-    }
-}
-.avatar_cabinet{
-    display: flex;
-    justify-content: end;
-    max-width: 300px;
-
-    .avatar_img{
-        img{
-            width: 30px;
-        }
     }
 }

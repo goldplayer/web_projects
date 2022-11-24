@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Kostya Karaman
+        link(rel="stylesheet", href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css")
+        link(rel="stylesheet", href="./css/main.min.css")
+    body 
+        //- tmp class
+        .wrapper 
+            header 
+                include header.jade
+            main    
+                //- includes
+                include sections/main.jade
+            footer
+                include footer.jade
+
+        script(src="./js/main.js") 

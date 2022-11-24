@@ -9,4 +9,15 @@
 *{
     padding: 0;
     margin: 0;
+    background-color: #f7f1e3;
+}
+.wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    @media (max-width:1300px){
+        max-width: 1440px;
+    }
 }

@@ -8,12 +8,24 @@
 </head>
 <body>
     
+<?php
 
+    $res = 0;
+
+    $first_value = rand(-10,10);
+    $second_value = rand (0,10);
+
+    $res = $first_value + $second_value * (pow($second_value,2));
+
+    if($res >= 0) {
+        echo $first_value." and ".$second_value."=".$res;
+    }else{
+        echo "$res and $first_value";
+    }
+
+
+?>
          
-         <form action="test=controller.php">
-                <input type="text_entered">     
-                <button type="submit">Send</button>       
-        </form>
-        
+
 </body>
 </html>

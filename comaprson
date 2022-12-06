@@ -1,0 +1,15 @@
+COMPARISON OPERATOR 
+---
+equal ==
+identical === 
+comare >< <= >= <>
+not equal !=
+not identical !==
+---
+
+lOGICAL OPERATOR
+---
+And &&
+or ||
+Not !
+---

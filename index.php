@@ -10,6 +10,12 @@
     <?php 
        
 
+    $rand = rand(-100,100);
+    $num = array($rand);
+
+    foreach  ($num as $numbers){
+        
+    }
 
     ?>
 </body>

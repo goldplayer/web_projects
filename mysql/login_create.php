@@ -1,23 +1,18 @@
 <?php
 
-if(isset($_POST['submit'])){
-    $username = $_POST['username'];
-    $password = $_POST['password'];    
-    $connect = mysqli_connect('localhost', 'root', '', 'login_app');
-    if($connect){
-        echo "We`re connected ";
+ include 'database.php';
+    $user_name = $_POST['username'];
+    $pass = $_POST['password'];
+
+
+    if(isset($_POST['submit'])){
+        $query = "INSERT INTO users (username,password)";
+        $query .= "VALUES ('$user_name','$pass')";
+        $result = mysqli_query($connect,$query);
     }else{
-        die("Database connection failed");
+        die("Failed");
     }
 
-
-    $query = "INSERT INTO users (user_name,password)";
-    $query .= "VALUES ('$username', '$password')";
-
-    $result = mysqli_query($connect,$query);
-        if(!$result){
-            die('faild' . mysqli_error() ); 
-        }
-}
+        // echo "We`re have good connection";
 
 ?>

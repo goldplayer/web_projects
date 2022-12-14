@@ -1,17 +1,6 @@
 <?php
-
-
-$connect = mysqli_connect('localhost', 'root', '', 'login_app');
-if($connect){
-    echo "We`re connected ";
-}else{
-    die("Database connection failed");
-}
-
-
+include 'database.php';
 $query = "SELECT * FROM users";
-
-
 $result = mysqli_query($connect,$query);
     if(!$result){
         die('faild' . mysqli_error() ); 
@@ -35,19 +24,22 @@ $result = mysqli_query($connect,$query);
    <div class="container">
    <div class="col-xs-6">
         <?php
+        if($connect){
+            while($row = mysqli_fetch_assoc($result)){
+               
 
-        while($row = mysqli_fetch_assoc($result)){
-            ?>
+                ?>
+                <pre>
 
-            <pre>
-
-            <?php
-            print_r($row);
-            ?>
-            </pre>
-            <?php
+                <?php
+                print_r($row);
+                ?>
+                </pre>
+                <?php
+            }
         }
         ?>
+        
     
     </div>
    </div>

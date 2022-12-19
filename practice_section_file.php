@@ -1,10 +1,4 @@
-<?php
-$name = 'Kostya';
-$value = 100;
-$expiration = time() + (60*60*24*7); //секунда - минута - час - дни
-setcookie($name,$value,$expiration);
 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,10 +9,12 @@ setcookie($name,$value,$expiration);
     <title>Document</title>
 </head>
 <body>
-    
-    <?php
-        
-    ?>
+        <?php
+            if(isset($_GET['source'])){
+                echo $_GET['source'];
+            }
+        ?>
+    <a href="practice_section_file.php?source=1999">Click me pls</a>
 
     <form action="the_post.php" method="post">
         <input type="text" name="name">

@@ -1,5 +1,5 @@
 <?php include 'functions.php'?>
-<?php if(isset($_POST['update'])){updateData();} ?>
+<?php if(isset($_POST['update'])){updateData();}  ?>
 <?php include 'include/header.php';?>
        <div class="container mt-4">
         <h1>Update Page</h1>

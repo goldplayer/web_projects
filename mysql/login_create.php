@@ -1,5 +1,5 @@
 <?php include 'functions.php'?>
-<?php createUser(); ?>
+<?php session_start(); $_SESSION['create'] = createUser(); ?>
 <?php include 'include/header.php';?>
 
        <div class="container mt-4">

@@ -48,8 +48,37 @@
                 <h1>Home</h1>
                 <hr>
             </div>
-            <div class="row">
+            <div class="row mt-4">
                 <div class="col-md-8 blog_view">
+                    <div class="card" >
+                        <div class="card-header">
+                            <h5 class="card-title">Glory to Ukraine or Death Putin</h5>
+                            <h6 class="user">by Admin</h6>
+                            <span class="data">Posted by september</span>
+                        </div>
+    
+                        <div class="card-body">
+                            <img src="..." class="card-img-top" alt="not found">
+                            <hr>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <hr>
+                            <a href="#" class="btn btn-primary">ReadMore</a>
+                        </div>
+                    </div>
+                    <div class="card" >
+                        <div class="card-header">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="user">by Admin</h6>
+                        </div>
+    
+                        <div class="card-body">
+                            <img src="..." class="card-img-top" alt="not found">
+                            <hr>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <hr>
+                            <a href="#" class="btn btn-primary">ReadMore</a>
+                        </div>
+                    </div>
                     <div class="card" >
                         <div class="card-header">
                             <h5 class="card-title">Card title</h5>
@@ -67,8 +96,32 @@
                 </div>
 
                 <div class="col-md-4 right_side_menu">
-                    <div class="serach_block">
+                    <div class="search_block">
                         <h4>Blog Search</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <box-icon name='search-alt'></box-icon>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="category_block">
+                        <h4>Category</h4>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul style="list-style: none;" class="category_list">
+                                    <li><a href="#">Demo</a></li>
+                                    <li><a href="#">Demo</a></li>
+                                    <li><a href="#">Demo</a></li>
+                                    <li><a href="#">Demo</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget_block">
+                    <h4>Widget</h4>
                         <div class="input-group">
                             <input type="text" class="form-control">
                             <span class="input-group-btn">
@@ -78,37 +131,12 @@
                             </span>
                         </div>
                     </div>
-                    <div class="category_block">
-                        <h4>Category</h4>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul style="list-style: none;">
-                                    <li><a href="#">Demo</a></li>
-                                    <li><a href="#">Demo</a></li>
-                                    <li><a href="#">Demo</a></li>
-                                    <li><a href="#">Demo</a></li>
-                                    <li><a href="#">Demo</a></li>
-                                    <li><a href="#">Demo</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul style="list-style: none;">
-                                    <li><a href="#">Demo</a></li>
-                                    <li><a href="#">Demo</a></li>
-                                    <li><a href="#">Demo</a></li>
-                                    <li><a href="#">Demo</a></li>
-                                    <li><a href="#">Demo</a></li>
-                                    <li><a href="#">Demo</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
             </div>
         </div>
     </div>
-
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

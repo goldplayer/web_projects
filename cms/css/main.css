@@ -10,10 +10,40 @@
     padding-bottom: 10px;
     padding-top: 10px;
     background-color: rgba(233,233,233,.5);
+    ;
 }
 #wrapper{
     padding-top: 30px;
 }
-.card-img-top{
+.card{
+    /* margin-top: 10px; */
+    margin-bottom: 30px;
+}
 
+
+
+.search_block, .category_block, .widget_block{
+    background: rgb(223, 230, 233, 0.5);
+    padding: 35px;
+    border-radius: 13px
+}
+.search_block > .input-group{
+    margin-top: 25px;
+}
+.search_block > .input-group input{
+    border-radius: 13px !important;
+}
+
+
+.category_block{
+    margin-top: 30px;
+}
+
+
+
+
+
+
+.widget_block{
+    margin-top: 30px;
 }

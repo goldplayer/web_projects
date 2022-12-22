@@ -1,4 +1,4 @@
-<?php include 'functions.php'?>
+<?php include 'functions.php' ?>
 <?php if(isset($_POST['update'])){updateData();}  ?>
 <?php include 'include/header.php';?>
        <div class="container mt-4">

@@ -1,4 +1,4 @@
-<?php include 'functions.php'?>
+<?php include 'functions.php' ?>
 <?php if(isset($_POST['delete'])){deleteData();} ?>
 <?php include 'include/header.php';?>
 <div class="container mt-4">

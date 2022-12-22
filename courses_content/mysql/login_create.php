@@ -1,4 +1,4 @@
-<?php include 'functions.php'?>
+<?php include 'functions.php' ?>
 <?php session_start(); $_SESSION['create'] = createUser(); ?>
 <?php include 'include/header.php';?>
 
@@ -15,7 +15,7 @@
                 </div>
                 <div class="form-group mt-4">
                     <button type="submit" name="create" class="btn btn-primary">Create</button>
-                    <a href="./login_update.php">Update Page</a>
+                    <a href="login_update.php">Update Page</a>
                 </div>
             </form>
        </div>

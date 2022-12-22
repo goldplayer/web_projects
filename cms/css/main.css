@@ -1,0 +1,19 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: rgba(233,233,233,.5);
+}
+#wrapper{
+    padding-top: 30px;
+}
+.card-img-top{
+
+}

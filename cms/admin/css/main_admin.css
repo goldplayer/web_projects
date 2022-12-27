@@ -42,7 +42,13 @@
 .menu_bar_link{
     color: #000;
     text-decoration: none;
-    
+    display: flex;
+    align-items: center;
+}
+.chevrons-down{
+    margin-left: 10px;
+    /* font-size: 10px; */
+    width: 14px;
 }
 .btn_envelope,
 .btn_user,
@@ -71,4 +77,31 @@
     padding-left: 15px;
     padding-right: 15px;
     height: 100%;
+}
+.dropdown-item{
+    display: flex;
+    align-items: center;
+}
+.dropdown-item box-icon{
+    margin-right: 10px;
+}
+  
+.card-body {
+    margin-top: 10px;
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+}
+.add_category_form{
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+}
+.add_category{
+    padding: 5px 15px;
+    background-color: #74b9ff;
+    border:0px solid;
+    border-radius: 7px;
+    margin-left: 10px;
+    color: #fff;
 }

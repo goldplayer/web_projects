@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
+
 <?php include "../includes/db.php" ?>
+<?php include "functions.php" ?>
+
+<?php ob_start(); ?>
+
 <head>
   <title>Admin Page</title>
   <!-- Required meta tags -->

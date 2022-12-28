@@ -10,10 +10,10 @@
             </a>
             <ul class="collapse" id="Posts">
                 <li class="menu_bar_item">
-                    <a href="" class="menu_bar_link">Charts</a>
+                    <a href="post.php" class="menu_bar_link">All Posts</a>
                 </li>
                 <li class="menu_bar_item">
-                    <a href="" class="menu_bar_link">Charts</a>
+                    <a href="categories.php" class="menu_bar_link">Categories</a>
                 </li>
             </ul>
 

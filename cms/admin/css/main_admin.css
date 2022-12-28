@@ -94,14 +94,26 @@
 }
 .add_category_form{
     display: flex;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     align-items: center;
 }
-.add_category{
+.edit_category_form{
+    display: flex;
+    align-items: center;
+}
+.add_category_btn, .edit_category_btn{
     padding: 5px 15px;
     background-color: #74b9ff;
     border:0px solid;
     border-radius: 7px;
     margin-left: 10px;
     color: #fff;
+}
+.categories_block{
+    display: flex;
+    justify-content: start; 
+    flex-wrap: nowrap;
+}
+.add_category_block{
+    margin-right: 30px;
 }

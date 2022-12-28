@@ -4,7 +4,7 @@
   <div id="wrapper">
     <div class="row">
         <div class="col-md-2 menu">
-          <?php include "includes/navigation.php" ?>
+          <?php include "includes/admin_navigation.php" ?>
         </div>
         <div class="col-md-10">
           <div class="content">

@@ -20,7 +20,8 @@
 }
 .menu{
     background: rgba(250, 250, 250, 1);
-    height: 100vh;
+    height: 100%;
+    max-width: 250px;
 }
 .left_menu_bar {
     height: 100vh;
@@ -116,4 +117,8 @@
 }
 .add_category_block{
     margin-right: 30px;
+}
+.post_small_img{
+    width: 100%;
+    border-radius: 13px;
 }

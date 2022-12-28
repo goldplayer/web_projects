@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 27 2022 г., 10:29
+-- Время создания: Дек 29 2022 г., 00:37
 -- Версия сервера: 10.4.27-MariaDB
 -- Версия PHP: 8.1.12
 
@@ -37,10 +37,21 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name_category`) VALUES
-(1, 'bootstrap'),
-(2, 'bootstrap'),
-(3, 'java'),
-(4, 'PHP');
+(1, 'Test_four'),
+(2, 'Porno'),
+(13, 'Java'),
+(14, 'C++'),
+(15, 'C++'),
+(16, 'C++'),
+(17, 'C++'),
+(18, 'C++govno'),
+(29, 'KamaDroch'),
+(31, 'KamaDroch'),
+(32, 'JavaScript'),
+(33, 'Procedural PHP'),
+(34, 'Test'),
+(35, 'Test1'),
+(36, 'kamAcoder');
 
 -- --------------------------------------------------------
 
@@ -67,7 +78,8 @@ CREATE TABLE `posts` (
 
 INSERT INTO `posts` (`id_post`, `category_id`, `post_name`, `creater`, `create_date`, `post_image`, `post_content`, `post_tags`, `post_comment`, `post_status`) VALUES
 (1, 1, 'kama cms course teset post ', 'KamaCoderAdmin', '2022-12-22', '', 'asjkdhaskhjdgashjdahjksgdhjgakss', 'kamacoder, java, php, dick', 0, 'draft'),
-(2, 1, 'Ukraine Vs RusshaParasha and Putin = Xyilo', 'Admin Adminovich', '2022-12-01', 'screenshot.png', 'Ukraine Vs RusshaParasha and Putin = XyiloUkraine Vs RusshaParasha and Putin = XyiloUkraine Vs RusshaParasha and Putin = XyiloUkraine Vs RusshaParasha and Putin = Xyilo', '', 0, 'draft');
+(2, 1, 'Ukraine Vs RusshaParasha and Putin = Xyilo', 'Admin Adminovich', '2022-12-01', 'screenshot.png', 'Ukraine Vs RusshaParasha and Putin = XyiloUkraine Vs RusshaParasha and Putin = XyiloUkraine Vs RusshaParasha and Putin = XyiloUkraine Vs RusshaParasha and Putin = Xyilo', '', 0, 'draft'),
+(4, 3, 'Admin Post', 'kamayoti', '2022-12-29', '8f182ea3520b6d6555d854479a8ee90c.jpg', 'The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). The result is 0 records from the right side, if there is no match.', 'admin_post', 4, 'draft');
 
 --
 -- Индексы сохранённых таблиц
@@ -93,13 +105,13 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT для таблицы `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT для таблицы `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_post` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -49,6 +49,10 @@ function deleteCategory(){
         $delete_category = $_GET['delete'];
         $query = "DELETE FROM category WHERE id = {$delete_category}";
         $delete_query = mysqli_query($connect, $query);
+
+        if(!$delete_category){
+            die("Erorr" . mysqli_error($connect));
+        }
         header("Location: categories.php");
     }
 }
@@ -80,6 +84,16 @@ function updateCategory(){
         }
         // header("Location: categories.php");
     }
+}
+
+
+
+function confirm($result){
+    global $connect;
+    if(!$result){
+        die('failed' . mysqli_error($connect));
+    }
+    // return $result;
 }
 
 ?>

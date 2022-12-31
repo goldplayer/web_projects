@@ -12,10 +12,11 @@
               <div class="col-md-10">
                 <div class="content">
                     <div class="caption_block">
-                        <h1>Welcome to 'Info - Post' page</h1>
+                        <h1>Welcome to Post-Info page</h1>
                         <small></small>
                     </div>
                     <div class="main_content">
+                     
                         <?php 
 
                             if(isset($_GET['source'])){
@@ -25,17 +26,22 @@
                             }
 
                             switch($source){
+                                
                                 case 'add_post';
                                     include "includes/add_post.php";
                                     break;
-                                case '100';
-                                    echo 'nice';
+
+                                    
+                                case 'edit_post';
+                                    include "includes/edit_post.php";
                                     break;
 
                                     default:
                                     include "includes/all_posts.php";
                                     break;
                             }
+
+                          
                         
                         ?>
                     </div>

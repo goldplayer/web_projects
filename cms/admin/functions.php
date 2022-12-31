@@ -96,4 +96,22 @@ function confirm($result){
     // return $result;
 }
 
+
+
+function deletePost(){
+    global $connect;
+
+    if(isset($_GET['delete'])){
+        $id_post = $_GET['delete'];
+        $delete_qry = "DELETE FROM posts WHERE id_post = {$id_post}";
+
+        $result_delete_qry = mysqli_query($connect, $delete_qry);
+
+        if(!$result_delete_qry){
+            die('failed' . mysqli_error($connect));
+        }
+        header("Location: post.php");
+    }
+}
+
 ?>

@@ -32,8 +32,6 @@
     margin: 0;
 }
 .menu_bar_item{
-    padding: 20px;
-
     cursor: pointer;
 }
 .menu_bar_item:hover{
@@ -41,6 +39,7 @@
 }
 
 .menu_bar_link{
+    padding: 20px;
     color: #000;
     text-decoration: none;
     display: flex;
@@ -119,6 +118,9 @@
     margin-right: 30px;
 }
 .post_small_img{
-    width: 100%;
+    width: 120px;
     border-radius: 13px;
+}
+.post_title_column{
+    max-width: 160px;
 }

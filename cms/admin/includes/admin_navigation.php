@@ -13,7 +13,7 @@
                     <a href="post.php" class="menu_bar_link">All Posts</a>
                 </li>
                 <li class="menu_bar_item">
-                    <a href="categories.php" class="menu_bar_link">Categories</a>
+                    <a href="post.php?source=add_post" class="menu_bar_link">Add Post</a>
                 </li>
             </ul>
 

@@ -1,34 +1,29 @@
 
 <?php
 
-
-if(isset($_POST['create_post'])){
-
-    $post_title = $_POST['post_name'];
-    $category = $_POST['category'];
-    $creator = $_POST['creator'];
-    $status = $_POST['status'];
-
-    $image = $_FILES['img']['name'];
-    $post_image_temp = $_FILES['img']['tmp_name'];
-
-    $post_tags = $_POST['tags'];
-    $post_content = $_POST['post_content'];
-    $post_date = date('d-m-y');
-    $post_comment_count = 4;
-
-
-    move_uploaded_file($post_image_temp, "../upload_images/$image");
-
-
-    $post_qry = "INSERT INTO posts(category_id, post_name, creater, create_date, post_image, post_content,post_tags,post_comment,post_status)";
-    $post_qry .= "VALUE({$category},'{$post_title}', '{$creator}',now(),'{$image}','{$post_content}','{$post_tags}','{$post_comment_count}','{$status}')";
-
-    $post_qry_request = mysqli_query($connect,$post_qry);
-    confirm($post_qry_request);
+if(isset($_GET['p_id'])){
+$the_post_id = $GET['p_id'];
 }
 
+$qry = "SELECT * FROM posts";
+$select_post_by_id = mysqli_query($connect, $qry);
+while($row = mysqli_fetch_assoc($select_post_by_id)){
+     $id_p = $row['id_post'];
+     $post_title = $row['post_name'];
+     $post_category = $row['category_id'];
+     $post_status = $row['post_status'];
+     $post_images = $row['post_image'];
+     $post_tags = $row['post_tags'];
+     $post_comment = $row['post_comment'];
+     $post_author = $row['creater'];
+     $post_date = $row['create_date'];
+
+}
+
+
 ?>
+
+
 
 <form class="row g-3" method="post" enctype="multipart/form-data">
 
@@ -44,7 +39,7 @@ if(isset($_POST['create_post'])){
 
   <div class="col-md-6">
     <label for="inputCity" class="form-label">Author</label>
-    <input type="text" class="form-control" id="creator" name="creator">
+    <input value="<?php echo $post_author; ?>" type="text" class="form-control" id="creator" name="creator">
   </div>
 
   <div class="col-md-6">

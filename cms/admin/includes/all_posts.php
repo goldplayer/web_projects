@@ -10,6 +10,7 @@
                                 <th scope="col">Comments</th>
                                 <th scope="col">Author</th>
                                 <th scope="col">Create Date</th>
+                                <th scope="col">Delete</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -35,22 +36,30 @@
                                             echo "
                                             <tr>
                                                 <th scope='row'>{$id_p}</th>
-                                                <td>{$post_title}</d>
-                                                <td>{$post_category}</td>
+                                                <td class='post_title_column'>{$post_title}</d>
+                                                <td style='width:100px'>{$post_category}</td>
                                                 <td>{$post_status}</td>
                                                 <td><img src='../images/$post_images' class='post_small_img' alt='not found'></img></td>
                                                 <td>{$post_tags}</td>
                                                 <td>{$post_comment}</td>
                                                 <td>{$post_author}</td>
                                                 <td>{$post_date}</td>
+                                                <td><a href='post.php?delete={$id_p}'>Delete</a></td>
+                                                <td><a href='post.php?source=edit_post&p_id{$id_p}'>Edit</a></td>
                                             </tr>
                                             
                                             
                                             ";
                                     
                                         }
+
                                 
                                 ?>
                                
                             </tbody>
                           </table>
+
+
+                            <?php 
+                                deletePost()
+                            ?>

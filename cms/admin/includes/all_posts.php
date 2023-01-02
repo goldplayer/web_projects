@@ -18,7 +18,7 @@
 
                                 <?php
 
-                                    $qry = "SELECT * FROM posts  LEFT JOIN category  ON posts.category_id = category.name_category ";
+                                    $qry = "SELECT * FROM posts";
                                     $select_post = mysqli_query($connect, $qry);
                                     
                                     while($row = mysqli_fetch_assoc($select_post)){
@@ -32,24 +32,30 @@
                                          $post_author = $row['creater'];
                                          $post_date = $row['create_date'];
 
+                                       
                                     
-                                            echo "
-                                            <tr>
-                                                <th scope='row'>{$id_p}</th>
-                                                <td class='post_title_column'>{$post_title}</d>
-                                                <td style='width:100px'>{$post_category}</td>
-                                                <td>{$post_status}</td>
-                                                <td><img src='../images/$post_images' class='post_small_img' alt='not found'></img></td>
-                                                <td>{$post_tags}</td>
-                                                <td>{$post_comment}</td>
-                                                <td>{$post_author}</td>
-                                                <td>{$post_date}</td>
-                                                <td><a href='post.php?delete={$id_p}'>Delete</a></td>
-                                                <td><a href='post.php?source=edit_post&p_id{$id_p}'>Edit</a></td>
-                                            </tr>
+                                            echo "<tr>";
+                                            echo "<td scope='row'>{$id_p}</td>";
+                                            echo "<td class='post_title_column'>{$post_title}</td>";
+
+
+                                            $query = "SELECT * FROM category WHERE id = {$post_category}";
+                                            $category_select_id = mysqli_query($connect, $query);
                                             
-                                            
-                                            ";
+                                            while ($row = mysqli_fetch_array($category_select_id)){
+                                            $id_category = $row['id'];
+                                            $category_title = $row['name_category'];
+
+                                            echo "<td> {$category_title}</td>";
+                                            }
+                                            echo "<td>{$post_status}</td>";
+                                            echo "<td><img src='../upload_images/$post_images' class='post_small_img' alt='not found'></img></td>";
+                                            echo "<td>{$post_tags}</td>";
+                                            echo "<td>{$post_comment}</td>";
+                                            echo "<td>{$post_author}</td>";
+                                            echo "<td>{$post_date}</td>";
+                                            echo "<td><a href='post.php?delete={$id_p}'>Delete</a></td>";
+                                            echo "<td><a href='post.php?source=edit_post&p_id={$id_p}'>Edit</a></td>";
                                     
                                         }
 

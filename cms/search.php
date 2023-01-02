@@ -5,7 +5,7 @@
     <div id="wrapper">
         <div class="container">
             <div class="caption_block">
-                <h1>Home</h1>
+                <h1>Search Result</h1>
                 <hr>
             </div>
             <div class="row mt-4">
@@ -14,7 +14,7 @@
                 
                 if(isset($_POST['submit'])){
                     $search = $_POST['search'];
-                    $query = "SELECT * FROM posts WHERE post_tags LIKE '%$search%' ";
+                    $query = "SELECT * FROM posts WHERE post_content LIKE '%$search%' ";
                     $search_query = mysqli_query($connect,$query);
         
         

@@ -16,7 +16,6 @@
                 <?php 
                 //INSERT
                 AddCategory();
-                
                 ?>
                 <!-- Insert category -->
                  <div class="add_category_block">

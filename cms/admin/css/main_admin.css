@@ -8,7 +8,9 @@
     padding-left: 15px;
     padding-right: 15px;
 }
-
+.main_content{
+    padding-top: 40px;
+}
 .functions_btn{
     position: relative;
     display: inline-flex;

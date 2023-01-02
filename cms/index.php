@@ -13,11 +13,12 @@
                 <?php 
                 
               
-                    $query_post = "SELECT * FROM posts";
+                $query_post = "SELECT * FROM posts";
                 $result_query_post = mysqli_query($connect,$query_post);
             
             
                 while($row = mysqli_fetch_array($result_query_post)){
+                    $get_post_id = $row['id_post'];
                     $post_heading = $row['post_name'];
                     $post_creator = $row['creater'];
                     $post_date = $row['create_date'];
@@ -30,13 +31,13 @@
                 ?>
                      <div class="card" >
                         <div class="card-header">
-                            <h5 class="card-title"><?php echo $post_heading ?></h5> 
+                            <a href="post.php?p_id=<?php echo $get_post_id; ?>" class="card-title"><?php echo $post_heading ?></a> 
                             <h6 class="user">by <?php echo $post_creator ?></h6>
                             <span class="data"><?php echo $post_date ?></span>
                         </div>
     
                         <div class="card-body">
-                            <img src="images/<?php echo $post_image; ?>" class="card-img-top" alt="not found">
+                            <img src="upload_images/<?php echo $post_image; ?>" class="card-img-top" alt="not found">
                             <hr>
                             <p class="card-text"><?php echo $post_content ?></p>
                             <hr>

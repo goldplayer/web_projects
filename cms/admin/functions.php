@@ -1,4 +1,11 @@
 <?php 
+function confirm($result){
+    global $connect;
+    if(!$result){
+        die('failed' . mysqli_error($connect));
+    }
+    // return $result;
+}
 
 function AddCategory(){
 
@@ -88,13 +95,7 @@ function updateCategory(){
 
 
 
-function confirm($result){
-    global $connect;
-    if(!$result){
-        die('failed' . mysqli_error($connect));
-    }
-    // return $result;
-}
+
 
 
 

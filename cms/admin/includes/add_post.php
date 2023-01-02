@@ -39,7 +39,19 @@ if(isset($_POST['create_post'])){
 
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Category</label>
-    <input type="text" class="form-control" id="category" name="category">
+    <select class="form-select"  name="category" id="category">
+        <?php 
+          $query = "SELECT * FROM category ";
+          $select_category = mysqli_query($connect, $query);
+
+          while($row = mysqli_fetch_assoc($select_category)){
+            $category_id = $row['id'];
+            $category_title = $row['name_category'];
+
+            echo "<option value ='{$category_id}'>{$category_title}</option>";
+          }
+        ?>
+    </select>
   </div>
 
   <div class="col-md-6">

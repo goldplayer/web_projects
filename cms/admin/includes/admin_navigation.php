@@ -22,7 +22,7 @@
                 <a href="categories.php" class="menu_bar_link">Categories</a>
             </li>
             <li class="menu_bar_item">
-                <a href="" class="menu_bar_link">Comments</a>
+                <a href="comments.php" class="menu_bar_link">Comments</a>
             </li>
          
             <li class="menu_bar_item">

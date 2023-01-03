@@ -31,7 +31,8 @@
                     <?php 
                        while ($row = mysqli_fetch_array($category_select)){
                             $category_title = $row['name_category'];
-                            echo "<li class='nav-link'><a class='nav-link' href='clen'>{$category_title}</a></li>";
+                            $cat_id = $row['id'];
+                            echo "<li class='nav-link'><a class='nav-link' href='categories.php?category=$cat_id'>{$category_title}</a></li>";
                         }
                     ?>
                 </ul>

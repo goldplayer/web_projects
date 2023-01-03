@@ -11,9 +11,14 @@
             <div class="row mt-4">
                 <div class="col-md-8 blog_view">
                 <?php 
-                
+
+                if(isset($_GET['category'])){
+
+                    $post_categories = $_GET['category'];
+
+                }
               
-                $query_post = "SELECT * FROM posts";
+                $query_post = "SELECT * FROM posts where category_id = $post_categories";
                 $result_query_post = mysqli_query($connect,$query_post);
             
             
@@ -23,7 +28,7 @@
                     $post_creator = $row['creater'];
                     $post_date = $row['create_date'];
                     $post_image = $row['post_image'];
-                    $post_content = substr($row['post_content'], 0, 200);
+                    $post_content = $row['post_content'];
                     $post_tags = $row['post_tags'];
               
             
@@ -45,7 +50,7 @@
                         </div>
 
                         <div class="card-footer">
-                            <a href="post.php?p_id=<?php echo $get_post_id; ?>" class="btn btn-primary">ReadMore</a>
+                            <a href="#" class="btn btn-primary">ReadMore</a>
                             <span class="tags"><?php echo $post_tags ?></span>
                         </div>
                     </div>

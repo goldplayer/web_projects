@@ -124,6 +124,6 @@
     border-radius: 13px;
 }
 .post_title_column{
-    /* max-width: 160px; */
-    width: 100%;
+    max-width: 160px;
+    /* width: 100%; */
 }

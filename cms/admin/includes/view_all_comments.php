@@ -64,13 +64,16 @@
                     while($row = mysqli_fetch_assoc($check_query)){
                         $post_id = $row['id_post'];
                         $post_name = $row['post_name'];
-                        // echo post name equals comments
+                        // echo post name wich equals comments
                         echo "<td><a href='../post.php?p_id=$post_id'>$post_name</a></td>";
                     }
                 /*----------------------*/
                 echo "<td>{$comments_date}</td>";
-                echo "<td><a href='post.php?unapprove=$comments_id'>Approve</a></td>";
-                echo "<td><a href='post.php?source=edit_po'>UnApprove</a></td>";
+
+             
+
+                echo "<td><a href='comments.php?approve=$comments_id'>Approve</a></td>";
+                echo "<td><a href='comments.php?unapprove=$comments_id''>UnApprove</a></td>";
 
 
                 echo "<td><a href='comments.php?delete=$comments_id'>Delete</a></td>";
@@ -84,4 +87,6 @@
 
     <?php 
         delete_Comments();
+        Edit_Comments_Status();
+
     ?>

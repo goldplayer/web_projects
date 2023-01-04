@@ -130,10 +130,33 @@ function delete_Comments(){
             die('die' . mysqli_error($connect));
         }
         header("Location: comments.php");
-    }
-  
+
         
-    
+    }
 }
+
+
+function Edit_Comments_Status(){
+    global $connect;
+    
+    if(isset($_GET['approve'])){
+        $the_comments_id = $_GET['approve'];
+
+        $qry = "UPDATE comments SET comments_status = 'approve'";
+        $approve_query = mysqli_query($connect, $qry);
+        if(!$approve_query){die('die' . mysqli_error($connect));}
+
+        header("Location: comments.php");
+    }elseif(isset($_GET['unapprove'])){
+        $the_comments_id = $_GET['unapprove'];
+
+        $qry = "UPDATE comments SET comments_status = 'unapprove'";
+        $approve_query = mysqli_query($connect, $qry);
+        if(!$approve_query){die('die' . mysqli_error($connect));}
+
+        header("Location: comments.php");
+    }
+}
+
 
 ?>

@@ -142,7 +142,7 @@ function Edit_Comments_Status(){
     if(isset($_GET['approve'])){
         $the_comments_id = $_GET['approve'];
 
-        $qry = "UPDATE comments SET comments_status = 'approve'";
+        $qry = "UPDATE comments SET comments_status = 'approved' where comments_id = $the_comments_id";
         $approve_query = mysqli_query($connect, $qry);
         if(!$approve_query){die('die' . mysqli_error($connect));}
 
@@ -150,7 +150,7 @@ function Edit_Comments_Status(){
     }elseif(isset($_GET['unapprove'])){
         $the_comments_id = $_GET['unapprove'];
 
-        $qry = "UPDATE comments SET comments_status = 'unapprove'";
+        $qry = "UPDATE comments SET comments_status = 'unapproved' where comments_id = $the_comments_id";
         $approve_query = mysqli_query($connect, $qry);
         if(!$approve_query){die('die' . mysqli_error($connect));}
 

@@ -1,17 +1,13 @@
 <?php
 
-    class Car{
-        var $wheels = 10;
+$array = [
+    [1, 2],
+    [3, 4],
+];
 
-
-        function Wheels_count(){
-            $this -> wheels = 11;
-        }
-
-    }
-
-    $how = new Car();
-    $how -> Wheels_count();
-    echo $this -> how;
-
+foreach ($array as list($a, $b)) {
+    // $a содержит первый элемент вложенного массива,
+    // а $b содержит второй элемент.
+    echo "A: $a; B: $b\n";
+}
 ?>

@@ -12,8 +12,8 @@
                 <div class="col-md-8 blog_view">
                 <?php 
                 
-              
-                $query_post = "SELECT * FROM posts";
+                
+                $query_post = "SELECT * FROM posts where post_status = 'published'";
                 $result_query_post = mysqli_query($connect,$query_post);
             
             
@@ -25,8 +25,11 @@
                     $post_image = $row['post_image'];
                     $post_content = substr($row['post_content'], 0, 200);
                     $post_tags = $row['post_tags'];
-              
-            
+                    $status_post = $row['post_status'];
+                    
+                    if($status_post !== 'published'){
+                        echo "<h1>Not post with status published</h1>"  ;
+                    }else{
 
                 ?>
                      <div class="card" >
@@ -54,7 +57,7 @@
 
                 <!-- close loop -->
                   <?php  
-                  }
+                  } }
                 ?>
                 <!-- close loop -->
                 </div>

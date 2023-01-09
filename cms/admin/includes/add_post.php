@@ -15,14 +15,14 @@ if(isset($_POST['create_post'])){
     $post_tags = $_POST['tags'];
     $post_content = $_POST['post_content'];
     $post_date = date('d-m-y');
-    $post_comment_count = 4;
+    // $post_comment_count = 4;
 
 
     move_uploaded_file($post_image_temp, "../upload_images/$image");
 
 
-    $post_qry = "INSERT INTO posts(category_id, post_name, creater, create_date, post_image, post_content,post_tags,post_comment,post_status)";
-    $post_qry .= "VALUE({$category},'{$post_title}', '{$creator}',now(),'{$image}','{$post_content}','{$post_tags}','{$post_comment_count}','{$status}')";
+    $post_qry = "INSERT INTO posts(category_id, post_name, creater, create_date, post_image, post_content,post_tags,post_status)";
+    $post_qry .= "VALUE('{$category}','{$post_title}', '{$creator}',now(),'{$image}','{$post_content}','{$post_tags}','{$status}')";
 
     $post_qry_request = mysqli_query($connect,$post_qry);
     confirm($post_qry_request);

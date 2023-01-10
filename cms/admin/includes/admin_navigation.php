@@ -31,10 +31,10 @@
                 </a>
                 <ul class="collapse" id="collapseExample">
                     <li class="menu_bar_item">
-                        <a href="" class="menu_bar_link">Charts</a>
+                        <a href="users.php" class="menu_bar_link">All Users</a>
                     </li>
                     <li class="menu_bar_item">
-                        <a href="" class="menu_bar_link">Charts</a>
+                        <a href="user.php?source=add_user" class="menu_bar_link">Add User</a>
                     </li>
                 </ul>
     
